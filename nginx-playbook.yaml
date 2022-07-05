@@ -1,0 +1,6 @@
+---
+- name: Install Nginx
+  hosts: aws
+
+  roles:
+    - nginx

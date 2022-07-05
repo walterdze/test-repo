@@ -1,0 +1,12 @@
+---
+
+ansible_host:  0.0.0.0
+ansible_user:  ec2-user
+ansible_become: true
+ansible_ssh_private_key_file: /root/.ssh/aws.key
+
+nginx_ssl: false
+nginx_server_name: "test-name"
+
+bck_dir: "/var/tmp/backups"
+clear_bck: true

@@ -1,0 +1,8 @@
+[aws:children]
+dev
+
+[db:children]
+dev
+
+[dev]
+ec2vm

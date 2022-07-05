@@ -1,0 +1,15 @@
+---
+
+- name: setup redirect to https
+  copy:
+    content: 'return 301 https://$host$request_uri;'
+    dest: /etc/nginx/default.d/redirect_https.conf
+  tags: nginx
+
+- name: setup https server
+  template:
+    src: /templates/https_server.conf.j2
+    dest: /etc/nginx/conf.d/https_server.conf
+  tags: nginx
+
+# After edit some service configs you should restart service with handler
